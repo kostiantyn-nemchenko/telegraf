@@ -70,7 +70,6 @@ by running Telegraf with the `--debug` argument.
     - available_reads (integer)
     - available_writes (integer)
     - commands (integer)
-    - commands_per_sec (integer)
     - connections_available (integer)
     - connections_current (integer)
     - connections_total_created (integer)
