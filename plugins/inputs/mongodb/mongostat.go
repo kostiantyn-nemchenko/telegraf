@@ -420,8 +420,8 @@ type ReplStats struct {
 
 // ReplApplyStats stores information related to oplog application process
 type ReplApplyStats struct {
-	Batches *BenchmarkStats `bson:"batches"`
-	Ops     int64           `bson:"ops"`
+	Batches *BasicStats `bson:"batches"`
+	Ops     int64       `bson:"ops"`
 }
 
 // ReplBufferStats stores information related to oplog buffer
@@ -439,13 +439,13 @@ type ReplExecutorStats struct {
 
 // ReplNetworkStats stores information related to network usage by replication process
 type ReplNetworkStats struct {
-	Bytes    int64           `bson:"bytes"`
-	GetMores *BenchmarkStats `bson:"getmores"`
-	Ops      int64           `bson:"ops"`
+	Bytes    int64       `bson:"bytes"`
+	GetMores *BasicStats `bson:"getmores"`
+	Ops      int64       `bson:"ops"`
 }
 
-// BenchmarkStats stores information about an operation
-type BenchmarkStats struct {
+// BasicStats stores information about an operation
+type BasicStats struct {
 	Num         int64 `bson:"num"`
 	TotalMillis int64 `bson:"totalMillis"`
 }
